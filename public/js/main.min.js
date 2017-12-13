@@ -112,10 +112,31 @@ $(document).ready(function() {
     }
   });
 
+  // popup politics
+  // open popup
+  $('.politics').on('click', function(event){
+    event.preventDefault();
+    $('.cd-politics').addClass('is-visible');
+  });
+  
+  // close popup
+  $('.cd-politics').on('click', function(event){
+    if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-politics') ) {
+      event.preventDefault();
+      $(this).removeClass('is-visible');
+    }
+  });
+  // close popup when clicking the esc keyboard button
+  $(document).keyup(function(event){
+      if(event.which=='27'){
+        $('.cd-politics').removeClass('is-visible');
+      }
+   });
+
 
   // style for form
 		$( '.form__wrap input[name=name_last]' ).closest( '.form-group' ).after(
-      '<div class="form-group"><select class="form-control footer__form-select" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent;">Выберите размер</option><option value="xs" class="option" style="background-color: transparent;">40</option><option value="x" class="option" style="background-color: transparent;">41</option><option value="red" class="option" style="background-color: transparent;">42</option><option value="grey" class="option" style="background-color: transparent;">43</option><option value="grey" class="option" style="background-color: transparent;">44</option><option value="grey" class="option" style="background-color: transparent;">45</option></select></div>'
+      '<div class="form-group"><select class="form-control footer__form-select" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent;">Выберите размер</option><option value="xs" class="option" style="background-color: transparent;">39 (29 см)</option><option value="x" class="option" style="background-color: transparent;">40 (29.5 см)</option><option value="red" class="option" style="background-color: transparent;">41 (30 см)</option><option value="grey" class="option" style="background-color: transparent;">42 (30.5 см)</option></select></div>'
     );
 
     $( '.form__wrap .order-form' ).addClass( 'footer__form-order' );

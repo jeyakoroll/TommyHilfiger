@@ -23,6 +23,7 @@
 		<main class="main">
 			<!-- Site header -->
 			<header class="header">
+				<img src="public/img/head-right.png" alt="" class="header__back">
 				<div class="container">
 					<div class="row">
 						<div class="header__logo">
@@ -45,21 +46,29 @@
 					<div class="row">
 						<img src="public/img/price-sale.png" alt="" class="price__sale-pic">
 						<ul class="price__list">
-							<li class="price__list-item">
-								<span class="price__list-item_pic"></span>
+							<li class="price__list-item price__list-item_one">
+								<span class="list-item_pic-wrap">
+									<span class="price__list-item_pic"></span>
+								</span>
 								повседневный стиль
 							</li>
 							<li class="price__list-item price__list-item_two">
-								<span class="price__list-item_pic"></span>
+								<span class="list-item_pic-wrap">
+									<span class="price__list-item_pic"></span>
+								</span>
 								натуральные материалы
 							</li>
 							<li class="price__list-item price__list-item_three">
-								<span class="price__list-item_pic"></span>
+								<span class="list-item_pic-wrap">
+									<span class="price__list-item_pic"></span>
+								</span>
 								стиль и комфорт без компромиссов
 							</li>
 							<li class="price__list-item price__list-item_four">
-								<span class="price__list-item_pic"></span>
-								одна из самых трендовых моделей 2017 года
+								<span class="list-item_pic-wrap">
+									<span class="price__list-item_pic"></span>
+								</span>
+								одна из самых трендовых <br class="br_mob"> моделей 2017 года
 							</li>
 							<li class="price__list-item price__list-item_bottom price__list-item_old">
 								<p class="item_old-text">
@@ -75,7 +84,7 @@
 						<div class="about">
 							<div class="price__pic"><img src="public/img/head-shoes.png" alt="" class="price__pic-item"></div>
 							<aside class="about__left">
-								<div class="about__left-title">ВЫБОР СЕЗОНА 2017-2018</div>
+								<div class="about__left-title">ВЫБОР СЕЗОНА<br class="br_mob"> 2017-2018</div>
 								<p class="about__left-text">
 									Зимние ботинки от Tommy Hilfiger не только впечатляют внешним видом, но и обеспечивают самую надежную защиту от зимних непогод. Это было бы невозможно без натуральной телячьей кожи отборного качества, которая послужила основным материалом для изготовления ботинок. Модель этого сезона значительно лучше сохраняет тепло, обеспечивает прекрасный микроклимат, обладает водоотталкивающим покрытием и не позволяет запотевать вашим ногам.
 								</p>
@@ -109,6 +118,7 @@
 			</section>
 			<!-- Site advantuges -->
 			<section class="advantuges">
+				<img src="public/img/advant-back.png" alt="" class="advantuges__back">
 				<div class="container">
 					<div class="row">
 						<h3 class="advantuges__title">ГЛАВНЫЕ ПРЕВОСХОДСТВА ЭТОЙ МОДЕЛИ</h3>
@@ -173,6 +183,7 @@
 						</p>
 					</div>
 				</div>
+				<img src="public/img/movie-back.png" alt="" class="video__back">
 			</section>
 			<!-- Site form -->
 			<section class="form">
@@ -207,6 +218,7 @@
 			<section class="composition">
 					<div class="container">
 						<div class="row">
+							<img src="public/img/back-composition.png" alt="" class="composition__back">
 							<div class="composition__wrap">
 								<div class="composition__top">
 									<h3 class="composition__top-title">
@@ -365,6 +377,7 @@
 						</div>
 					</div>
 				</div>
+				<img src="public/img/footer-shoes.png" alt="" class="footer__shoes">
 			</section>
 			<!-- for sticky footer -->
 			<div class="empty"></div>
@@ -373,12 +386,38 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
-						<p class="footer__politics">Политика конфиденциальности</p>
+						<a class="footer__politics politics">Политика конфиденциальности</a>
 						<p class="footer__copy">Все права защищены. Copyright 2017 ©</p>
 						<p class="footer__addres">ТОВ "Time4stile" г.Харьков, ул.Ломоносова, 53А, ЕГРПОУ 32127338</p>
 				</div>
 			</div>
 		</footer>
+
+		<!-- popup -->
+		<div class="cd-politics" role="alert">
+			<div class="cd-popup-container">
+				<div class="header__bottom-form form-popup_politic">
+					<!-- <p class="form-popup_politic-title">политика конфиденциальности</p> -->
+					<p class="header__bottom-form_politic">
+						Наш интернет-магазин уважительно относится к правам клиента. Соблюдается строгая конфиденциальность при оформлении заказа. Сведения надёжно сохраняются и защищены от передачи.
+					</p>
+					<br>
+					<p class="header__bottom-form_politic">
+						Согласием на обработку данных клиента исключительно с целью оказания услуг является размещение заказа на сайте.
+					</p>
+					<br>
+					<p class="header__bottom-form_politic">
+						К персональным данным относится личная информация о клиенте: домашний адрес; имя, фамилия, отчество; сведения о рождении; имущественное, семейное положение; личные контакты (телефон, электронная почта) и прочие сведения, которые перечислены в Законе «О персональных данных».
+					</p>
+					<br>
+					<p class="header__bottom-form_politic">
+						Клиент вправе отказаться от обработки персональных данных. Нами в данном случае гарантируется удаление с сайта всех персональных данных в трёхдневный срок в рабочее время. Подобный отказ клиент может оформить простым электронным письмом на адрес, указанный на странице нашего сайта.
+					</p>
+				</div>
+				<a href="#0" class="cd-popup-close img-replace">Close</a>
+			</div> <!-- cd-popup-container -->
+		</div> <!-- cd-politics -->
+
 	<!-- JS -->
 	<script src="public/js/jquery.min.js"></script>
 	<script src="public/js/jquery.fancybox.min.js"></script>
