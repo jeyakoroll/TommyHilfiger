@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>New_layout</title>
+	<title>Tommy Hilfiger</title>
 	<!-- CEO -->
 	<meta name="description" content="template">
 	<meta name="keywords" content="template">
@@ -13,7 +13,6 @@
 	<link rel="stylesheet" href="public/css/normalize.css">
 	<link rel="stylesheet" href="public/css/fonts.css">
 	<link rel="stylesheet" href="public/css/animate.css">
-	<link rel="stylesheet" href="public/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="public/css/bootstrap.min.css">
 	<link rel="stylesheet" href="public/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="public/css/owl.theme.default.min.css">
@@ -32,16 +31,16 @@
 							</a>
 						2</div>
 						<ul class="header__menu">
-							<li class="header__menu-item"><a href="" class="header__menu-link">главная</a></li>
-							<li class="header__menu-item"><a href="" class="header__menu-link">видео</a></li>
-							<li class="header__menu-item"><a href="" class="header__menu-link">отзывы</a></li>
-							<li class="header__menu-item"><a href="" class="header__menu-link">оплата и доставка</a></li>
+							<li class="header__menu-item"><a href="#main" class="header__menu-link">главная</a></li>
+							<li class="header__menu-item"><a href="#video" class="header__menu-link">видео</a></li>
+							<li class="header__menu-item"><a href="#reviews" class="header__menu-link">отзывы</a></li>
+							<li class="header__menu-item"><a href="#work" class="header__menu-link">оплата и доставка</a></li>
 						</ul>
 					</div>
 				</div>
 			</header>
 			<!-- Site price area -->
-			<section class="price">
+			<section class="price section" data-section="main">
 				<div class="container">
 					<div class="row">
 						<img src="public/img/price-sale.png" alt="" class="price__sale-pic">
@@ -78,7 +77,7 @@
 							</li>
 							<li class="price__list-item price__list-item_bottom price__list-item_new">2500 грн.</li>
 							<li class="price__list-item price__list-item_bottom ">
-								<p class="price__list-item_button">заказать</p>	
+								<p class="price__list-item_button hvr-float-shadow" data-form="buy">заказать</p>	
 							</li>
 						</ul>
 						<div class="about">
@@ -169,12 +168,12 @@
 				</div>
 			</section>
 			<!-- Site video -->
-			<section class="video">
+			<section class="video section" data-section="video">
 				<div class="container">
 					<div class="row">
 						<div class="video__item">
 							<div class="video__item-show">
-								<iframe width="493" height="308" src="https://www.youtube.com/embed/10_uNi-w3H0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+								<iframe width="95%" height="95%" src="https://www.youtube.com/embed/10_uNi-w3H0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 							</div>
 							<img src="public/img/video-please.png" alt="" class="video__item-pic">
 						</div>
@@ -189,8 +188,8 @@
 			<section class="form">
 				<div class="container">
 					<div class="row">
-						<h3 class="form__title">
-							заказывай сейчас со скидкой <span class="form__title-red">-50%</span>  по специальной цене <span class="form__title-old">
+						<h3 class="form__title" data-section="buy">
+							заказывай сейчас со скидкой <span class="form__title-red">-50%</span>  по специальной цене <br class="br_tab"> <span class="form__title-old">
 								5000 грн.
 								<span class="form__title-old_line"></span>
 							</span>
@@ -220,6 +219,8 @@
 						<div class="row">
 							<img src="public/img/back-composition.png" alt="" class="composition__back">
 							<div class="composition__wrap">
+								<img src="public/img/comp-one.png" alt="" class="composition__pic-one">
+								<img src="public/img/comp-two.png" alt="" class="composition__pic-two">
 								<div class="composition__top">
 									<h3 class="composition__top-title">
 										5 НЕОСПОРИМЫХ ПРЕИМУЩЕСТВ КОЖАНОЙ ОБУВИ
@@ -244,10 +245,14 @@
 								</div>
 								<div class="composition__center">
 									<p class="composition__center-one">Натуральный мех</p>
+									<div class="composition__center-line composition__center-line_one"></div>
 									<p class="composition__center-two">Полиуретановая подошва</p>
+									<div class="composition__center-line composition__center-line_two"></div>
 									<p class="composition__center-three">Натуральная телячья кожа высшего качества</p>
+									<div class="composition__center-line composition__center-line_three"></div>
 									<p class="composition__center-four">Теплая натуральная стелька</p>
-									<img src="" alt="" class="composition__center-pic">
+									<div class="composition__center-line composition__center-line_four"></div>
+									<div class="composition__center-pic"></div>
 								</div>
 								<div class="composition__bottom">
 									<h3 class="composition__bottom-title">
@@ -282,12 +287,12 @@
 		    </div>
 			</section>
 			<!-- Site reviews -->
-			<section class="reviews">
+			<section class="reviews section" data-section="reviews">
 				<div class="container">
 					<div class="row">
 						<h3 class="reviews__title">отзывы наших клиентов</h3>
 						<div class="colors__gallery-wrap">
-							<ul class="colors__gallery owl-carousel" id="colors-gallery">
+							<ul class="colors__gallery owl-carousel owl-theme" id="colors-gallery">
 								<li class="colors__gallery-item">
 									<div class="colors__gallery-text">
 										Нельзя не отметить аккуратный пошив и само качество. Это хорошие ботинки, которые делают человека уверенным в любом деле. Всенда стоит делать выбор в пользу натуральных материалов и зима не принесет неудобств.
@@ -319,7 +324,7 @@
 				</div>
 			</section>
 			<!-- Site work -->
-			<section class="work">
+			<section class="work section" data-section="work">
 				<div class="container">
 					<div class="row">
 						<h3 class="work__title">оплата и доставка</h3>
@@ -420,7 +425,6 @@
 
 	<!-- JS -->
 	<script src="public/js/jquery.min.js"></script>
-	<script src="public/js/jquery.fancybox.min.js"></script>
 	<script src="public/js/owl.carousel.min.js"></script>
 	<script src="public/js/main.min.js"></script>
 </body>

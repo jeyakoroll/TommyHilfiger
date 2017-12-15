@@ -72,18 +72,22 @@ $(document).ready(function() {
 
   // gallery in reviews area
   reviewsGallery.owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
     loop: true,
     responsiveClass:true,
     nav: false,
+    autoplay: true,
+    autoplayTimeout: 4000,
     autoWidth: true,
     navContainer: '.colors__navs',
     responsive:{
       0:{
           items: 1,
           margin: 50,
-          autoplay: true,
           center: true,
-          dots: false
+          nav: false,
+          dots: true
       },
       480:{
           margin: 100,
@@ -113,7 +117,6 @@ $(document).ready(function() {
   });
 
   // popup politics
-  // open popup
   $('.politics').on('click', function(event){
     event.preventDefault();
     $('.cd-politics').addClass('is-visible');
@@ -141,10 +144,70 @@ $(document).ready(function() {
 
     $( '.form__wrap .order-form' ).addClass( 'footer__form-order' );
     $( '.form__wrap input' ).addClass( 'footer__form-data' );
-    $( '.form__wrap button' ).addClass( 'footer__form-button' );
+    $( '.form__wrap button' ).addClass( 'footer__form-button hvr-bob' );
     $('.form__wrap input[name=name_first]').attr("placeholder","Имя");
     $('.form__wrap input[name=name_last]').attr("placeholder","Телефон");
 	
+  // show form
+  $('.price__list-item_button').on('click', showForm);
 
+  function showForm (e) {
+      e.preventDefault();
+      toForm($(this).data('form'), true);
+  }
+
+  function toForm(section, isAnimate) {
+      var 
+          reqSection = $('.form__title').filter('[data-section="' + section +'"]'),
+          reqSectionPos = reqSection.offset().top;
+
+      if (isAnimate) {
+        $('body, html').animate({scrollTop: reqSectionPos}, 350);
+      }
+  }
+
+  // hight of the fixed menu when scrolling
+  var
+     menu = $('.header__top'),
+     logo = $('.header__top-logo'),
+     button = $('.header__top-buy_wrap'),
+     nav = $('.header__top-nav');
+      
+      $(window).scroll(function(){
+          if ( $(this).scrollTop() <= 100 && menu.hasClass("move") ) {
+              menu.removeClass("move").addClass("default");
+              logo.removeClass('logo-top');
+              button.removeClass('buy_wrap-margin');
+              nav.removeClass('nav-margin');
+          }
+          else if ( $(this).scrollTop() > 100 && menu.hasClass("default") ){
+              menu.removeClass("default").addClass("move");
+              logo.addClass('logo-top');
+              button.addClass('buy_wrap-margin');
+              nav.addClass('nav-margin');
+          } 
+      });//scroll
+
+  // scroll function call
+  $('.header__menu-link').on('click', function(e) {
+    e.preventDefault();
+
+    showSection($(this).attr('href'), true); 
+  });
+
+  showSection(window.location.hash, false);
+
+  function showSection(section, isAnimate) {
+  var 
+      direction = section.replace(/#/, ''),
+      reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+      reqSectionPos = reqSection.offset().top - 115;
+
+      if (isAnimate) {
+        $('body, html').animate({scrollTop: reqSectionPos}, 400);
+      } else {
+        $('body, html').scrollTop(reqSectionPos);
+      }
+  }
 
 });
