@@ -21,7 +21,7 @@
 <body class="body">
 		<main class="main">
 			<!-- Site header -->
-			<header class="header">
+			<header class="header default">
 				<img src="public/img/head-right.png" alt="" class="header__back">
 				<div class="container">
 					<div class="row">
@@ -29,7 +29,7 @@
 							<a href="" class="header__logo-link">
 								<img src="public/img/logo.png" alt="" class="header__logo-pic">
 							</a>
-						2</div>
+						</div>
 						<ul class="header__menu">
 							<li class="header__menu-item"><a href="#main" class="header__menu-link">главная</a></li>
 							<li class="header__menu-item"><a href="#video" class="header__menu-link">видео</a></li>
@@ -43,7 +43,7 @@
 			<section class="price section" data-section="main">
 				<div class="container">
 					<div class="row">
-						<img src="public/img/price-sale.png" alt="" class="price__sale-pic">
+						<img src="public/img/price-sale.png" alt="" class="price__sale-pic wow bounceInDown">
 						<ul class="price__list">
 							<li class="price__list-item price__list-item_one">
 								<span class="list-item_pic-wrap">
@@ -81,7 +81,7 @@
 							</li>
 						</ul>
 						<div class="about">
-							<div class="price__pic"><img src="public/img/head-shoes.png" alt="" class="price__pic-item"></div>
+							<div class="price__pic wow bounceInLeft"><img src="public/img/head-shoes.png" alt="" class="price__pic-item"></div>
 							<aside class="about__left">
 								<div class="about__left-title">ВЫБОР СЕЗОНА<br class="br_mob"> 2017-2018</div>
 								<p class="about__left-text">
@@ -122,9 +122,9 @@
 					<div class="row">
 						<h3 class="advantuges__title">ГЛАВНЫЕ ПРЕВОСХОДСТВА ЭТОЙ МОДЕЛИ</h3>
 						<div class="advantuges__bottom">
-							<ul class="advantuges__left">
+							<ul class="advantuges__left wow bounceInLeft">
 								<li class="advantuges__left-item">
-									<p class="advantuges__left-title">ГЛАВНЫЕ ПРЕВОСХОДСТВА ЭТОЙ МОДЕЛИ</p>
+									<p class="advantuges__left-title">НАТУРАЛЬНАЯ КОЖА С ВОДО - <br> ОТТАЛКИВАЮЩИМ ПОКРЫТИЕМ</p>
 									<p class="advantuges__left-text">
 										Кожаная обувь обладает самым высоким уровнем гигиеничности и надежно защищает от низких температур. Натуральная кожа лучше всего удерживает тепло.
 									</p>
@@ -142,7 +142,7 @@
 									</p>
 								</li>
 							</ul>
-							<ul class="advantuges__right">
+							<ul class="advantuges__right wow bounceInRight">
 								<li class="advantuges__right-item">
 									<p class="advantuges__right-title">СТИЛЬ И ДИЗАЙН ОТ СИЛЬНОГО БРЕНДА</p>
 									<p class="advantuges__right-text">
@@ -162,7 +162,7 @@
 									</p>
 								</li>
 							</ul>
-							<img src="public/img/advant-shoes.png" alt="" class="advantuges__bottom-pic">
+							<img src="public/img/advant-shoes.png" alt="" class="advantuges__bottom-pic wow zoomIn">
 						</div>
 					</div>
 				</div>
@@ -171,7 +171,7 @@
 			<section class="video section" data-section="video">
 				<div class="container">
 					<div class="row">
-						<div class="video__item">
+						<div class="video__item wow fadeInDown">
 							<div class="video__item-show">
 								<iframe width="95%" height="95%" src="https://www.youtube.com/embed/10_uNi-w3H0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 							</div>
@@ -243,7 +243,7 @@
 										</li>
 									</ul>
 								</div>
-								<div class="composition__center">
+								<div class="composition__center wow fadeInUp">
 									<p class="composition__center-one">Натуральный мех</p>
 									<div class="composition__center-line composition__center-line_one"></div>
 									<p class="composition__center-two">Полиуретановая подошва</p>
@@ -329,25 +329,25 @@
 					<div class="row">
 						<h3 class="work__title">оплата и доставка</h3>
 						<div class="work__content">
-							<div class="work__content-item work__content-item_one">
+							<div class="work__content-item wow swing work__content-item_one">
 								<p class="work__content-text">
 									вы оставляете 
 									заявку на сайте 
 								</p>
 							</div>
-							<div class="work__content-item work__content-item_two">
+							<div class="work__content-item wow swing work__content-item_two">
 								<p class="work__content-text">
 									мы связываемся
 									с вами
 								</p>
 							</div>
-							<div class="work__content-item work__content-item_three">
+							<div class="work__content-item wow swing work__content-item_three">
 								<p class="work__content-text">
 									отправляем 
 									вашу посылку
 								</p>
 							</div>
-							<div class="work__content-item work__content-item_four">
+							<div class="work__content-item wow swing work__content-item_four">
 								<p class="work__content-text">
 									вы оплачиваете
 									ее на почте
@@ -425,6 +425,7 @@
 
 	<!-- JS -->
 	<script src="public/js/jquery.min.js"></script>
+	<script src="public/js/wow.min.js"></script>
 	<script src="public/js/owl.carousel.min.js"></script>
 	<script src="public/js/main.min.js"></script>
 </body>

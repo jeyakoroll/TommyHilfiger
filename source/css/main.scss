@@ -243,12 +243,6 @@ p {
 
 .header__back {
 	display: none;
-	@include desktop {
-		// display: block;
-		// position: absolute;
-		// top: 115px;
-		// right: 0;
-	}
 	@include laptop {
 		display: none;
 	}
@@ -310,8 +304,23 @@ p {
 	}
 }
 
-// price area
+.move {
+	min-height: 0;
+	transition: all 0.5s;
+	height: 50px;
+}
 
+.push-top {
+	margin-top: 12px;
+}
+
+.logo-top {
+	transition: all .5s;
+	position: absolute;
+	top: -300px;
+}
+
+// price area
 .price {
 	padding-top: 115px;
 	min-height: 980px;
@@ -324,7 +333,6 @@ p {
 		padding-top: 35px;
 		position: relative;
 		@include phones {
-			// padding-top: 35px;
 			min-height: 0;
 			height: auto;
 		}
@@ -762,15 +770,6 @@ p {
 		@include laptop {
 			min-height: 1360px;
 		}
-		// @include main(844px) {
-		// 	min-height: 1530px;
-		// }
-		// @include main(796px) {
-		// 	min-height: 1580px;
-		// }
-		// @include main(539px) {
-		// 	min-height: 1580px;
-		// }
 		@include tablets {
 			padding: 0	25px;			
 		}
@@ -825,6 +824,11 @@ p {
 		align-items: center;
 	}
 	&-item {
+		padding-left: 10px;
+		transition: all 0.3s;
+		&:hover {
+			@include around-shadow;
+		}
 		@include laptop {
 			width: 515px;
 			padding-left: 20px;
@@ -841,8 +845,6 @@ p {
 		font-size: 18px;
 		color: #79c8c2;
 		margin-bottom: 10px;
-		@include laptop {
-		}
 	}
 	&-text {
 		font-size: 14px;
@@ -865,6 +867,11 @@ p {
 		align-items: center;
 	}
 	&-item {
+		padding-left: 10px;
+		transition: all 0.3s;
+		&:hover {
+			@include around-shadow;
+		}
 		@include laptop {
 			width: 515px;
 			padding-left: 20px;
@@ -1070,6 +1077,7 @@ p {
 	margin-bottom: 17px;
 	text-transform: uppercase;
 	@include desktop {
+		width: auto;
 		margin: 0 0 20px;
 	}
 	@include laptop {
@@ -1213,7 +1221,6 @@ p {
 		position: relative;
 		padding: 0 65px 60px;
 		overflow: visible;
-		// background: url('../img/back-composition.png') no-repeat left top;
 		@include desktop {
 			padding: 0 0 60px;
 		}
@@ -1251,21 +1258,17 @@ p {
 		background-color: #fff;
 		justify-content: center;
 		padding: 40px 20px 20px 30px;
-		min-height: 1300px;
-	}
-	@include phones {
-		padding: 30px 20px 20px 30px;
-		min-height: 1220px;
+		min-height: 0;
 		height: auto;
 	}
-	@include main(429px) {
-		min-height: 1280px;
+	@include main(516px) {
+		min-height: 1320px;
+	}
+	@include phones {
+		padding: 30px 20px 0px 30px;
 	}
 	@include main(372px) {
-		min-height: 1310px;
-	}
-	@include main(320px) {
-		min-height: 1340px;
+		padding-bottom: 30px;
 	}
 }
 
@@ -1332,7 +1335,7 @@ p {
 
 .composition__center {
 	background: url('../img/compos-center.png') no-repeat;
-	margin: 6% auto 0;
+	margin: 58px auto 0;
 	position: relative;
 	width: 671px;
 	height: 488px;
@@ -1345,7 +1348,10 @@ p {
 	@include tablets {
 		width: 212px;
 		height: 342px;
-		margin: 23% auto 0;
+		margin: 144.5px auto 0;
+	}
+	@include phones {
+		margin-top: 110px;
 	}
 	&-one {
 		position: absolute;
@@ -1469,7 +1475,7 @@ p {
 
 .composition__bottom {
 	max-width: 480px;
-	height: 300px;
+	min-height: 300px;
 	margin-left: auto;
 	padding-top: 80px;
 	@include desktop {
@@ -1478,7 +1484,10 @@ p {
 	@include tablets {
 		margin-right: auto;
 		margin-left: auto;
-		padding-top: 17%;
+		padding-top: 106.6px;
+	}
+	@include phones {
+		padding-top: 80px;
 	}
 }
 
@@ -1585,8 +1594,21 @@ p {
         background-repeat: no-repeat; }
     #hero .slider-holder .controls {
       position: absolute;
-      width: 100%;
+      width: 70%;
       top: 50%;
+      left: 15%;
+      @include desktop {
+      	width: 80%;
+      	left: 10%;
+      }
+      @include main(1024px) {
+      	width: 90%;
+      	left: 5%;
+      }
+      @include main (640px) {
+      	width: 100%;
+      	left: 0;
+      }
       heigth: auto;
       pointer-events: none;
       z-index: 2; }
@@ -1624,7 +1646,6 @@ p {
 	& .row {
 		position: relative;
 		display: block;
-		// padding: 0 65px 60px;
 		@include phones {
 			padding-bottom: 10px;
 		}
@@ -1977,7 +1998,6 @@ p {
 	transition: color 0.2s;
 	&:hover {
 		text-decoration: none;
-		// color: #cecece;
 	}
 	&:focus {
 		color: #cecece;

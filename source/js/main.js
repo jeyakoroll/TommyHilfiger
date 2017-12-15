@@ -116,6 +116,9 @@ $(document).ready(function() {
     }
   });
 
+  // ----- WOW ----- \\
+  new WOW().init();
+  
   // popup politics
   $('.politics').on('click', function(event){
     event.preventDefault();
@@ -139,7 +142,7 @@ $(document).ready(function() {
 
   // style for form
 		$( '.form__wrap input[name=name_last]' ).closest( '.form-group' ).after(
-      '<div class="form-group"><select class="form-control footer__form-select" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent;">Выберите размер</option><option value="xs" class="option" style="background-color: transparent;">39 (29 см)</option><option value="x" class="option" style="background-color: transparent;">40 (29.5 см)</option><option value="red" class="option" style="background-color: transparent;">41 (30 см)</option><option value="grey" class="option" style="background-color: transparent;">42 (30.5 см)</option></select></div>'
+      '<div class="form-group"><select class="form-control footer__form-select" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent;">Выберите размер</option><option value="xs" class="option" style="background-color: transparent;">40</option><option value="x" class="option" style="background-color: transparent;">41</option><option value="red" class="option" style="background-color: transparent;">42</option><option value="grey" class="option" style="background-color: transparent;">43</option><option value="grey" class="option" style="background-color: transparent;">44</option><option value="grey" class="option" style="background-color: transparent;">45</option></select></div>'
     );
 
     $( '.form__wrap .order-form' ).addClass( 'footer__form-order' );
@@ -168,25 +171,24 @@ $(document).ready(function() {
 
   // hight of the fixed menu when scrolling
   var
-     menu = $('.header__top'),
-     logo = $('.header__top-logo'),
-     button = $('.header__top-buy_wrap'),
-     nav = $('.header__top-nav');
+     menu = $('.header'),
+     menuList = $('.header__menu'),
+     logo = $('.header__logo');
+    
       
-      $(window).scroll(function(){
-          if ( $(this).scrollTop() <= 100 && menu.hasClass("move") ) {
-              menu.removeClass("move").addClass("default");
-              logo.removeClass('logo-top');
-              button.removeClass('buy_wrap-margin');
-              nav.removeClass('nav-margin');
-          }
-          else if ( $(this).scrollTop() > 100 && menu.hasClass("default") ){
-              menu.removeClass("default").addClass("move");
-              logo.addClass('logo-top');
-              button.addClass('buy_wrap-margin');
-              nav.addClass('nav-margin');
-          } 
-      });//scroll
+    $(window).scroll(function(){
+      console.log($(this).scrollTop());
+        if ( $(this).scrollTop() <= 100 && menu.hasClass("move") ) {
+            menu.removeClass("move").addClass("default");
+            menuList.removeClass('push-top');
+            logo.removeClass('logo-top');
+        }
+        else if ( $(this).scrollTop() > 100 && menu.hasClass("default") ){
+            menu.removeClass("default").addClass("move");
+            menuList.addClass('push-top');
+            logo.addClass('logo-top');
+        } 
+    });//scroll
 
   // scroll function call
   $('.header__menu-link').on('click', function(e) {
@@ -201,7 +203,7 @@ $(document).ready(function() {
   var 
       direction = section.replace(/#/, ''),
       reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-      reqSectionPos = reqSection.offset().top - 115;
+      reqSectionPos = reqSection.offset().top - 49;
 
       if (isAnimate) {
         $('body, html').animate({scrollTop: reqSectionPos}, 400);
