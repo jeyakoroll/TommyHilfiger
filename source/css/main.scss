@@ -232,8 +232,8 @@ p {
 	position: fixed;
 	background-color: #141821;
 	@include tablets {
-		min-height: 185px;
 		display: none;
+		top: 20px;
 	}
 	.row {
 		flex-flow: column;
@@ -283,6 +283,11 @@ p {
 	@include roboto(light);
 	margin: 0 9px;
 	text-transform: uppercase;
+	&_hidden {
+		@include tablets {
+			display: none;
+		}
+	}
 	@include tablets {
 		margin-bottom: 5px;
 	}
@@ -325,7 +330,7 @@ p {
 	padding-top: 115px;
 	min-height: 980px;
 	@include tablets {
-		padding-top: 20px;
+		padding-top: 0;
 	}
 	& .row {
 		flex-flow: column wrap;
@@ -648,7 +653,7 @@ p {
 	@include laptop {
 		width: 503px;
 		padding-left: 6%;
-		margin: 15% auto 10%;
+		margin: 75px auto 10%;
 	}
 	@include tablets {
 		width: 450px;
@@ -695,7 +700,7 @@ p {
 	position: relative;
 	overflow: hidden;
 	@include laptop {
-		margin: 0 auto 5%;
+		margin: 0 auto 25px;
 	}
 	@include phones {
 		width: 290px;
@@ -1253,7 +1258,7 @@ p {
 		background: url('../img/comp-mobi.png') no-repeat center center/cover;
 		min-height: 1200px;
 	}
-	@include tablets {
+	@include main(770px) {
 		background: url('../img/comp-mini.png') no-repeat center center/cover;
 		background-color: #fff;
 		justify-content: center;
@@ -1382,7 +1387,7 @@ p {
     	top: -17%;
 		}
 		@include phones {
-			left: -10%;
+			left: 2%;
 		}
 	}
 	&-three {
@@ -1421,7 +1426,8 @@ p {
 	    bottom: -28%;
 		}
 		@include phones {
-			left: -10%;
+			left: 2%;
+			// bottom: -35%;
 		}
 	}
 }
@@ -1444,7 +1450,7 @@ p {
 		&_two {
 			top: -60px;
 			@include phones {
-				left: -12%;
+				left: 0;
 			}
 		}
 		&_three {
@@ -1457,7 +1463,7 @@ p {
 		&_four {
 			bottom: -70px;
 			@include phones {
-				left: -12%;
+				left: 0;
 			}
 		}
 	}
@@ -1798,6 +1804,9 @@ p {
 	@include laptop {
 		min-height: 1520px;
 	}
+	@include phones {
+		background: url('../img/footer-mob.png') no-repeat center center/cover;
+	}
 	& .row {
 		flex-flow: column wrap;
 		padding: 0 65px 60px;
@@ -1835,6 +1844,9 @@ p {
 	@include tablets {
 		flex-flow: column wrap;
 		align-items: center;
+	}
+	@include small_phones {
+		padding: 0;
 	}
 }
 

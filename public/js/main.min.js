@@ -90,7 +90,7 @@ $(document).ready(function() {
           dots: true
       },
       480:{
-          margin: 100,
+          margin: 200,
           items: 1,
           center: true,
           dots: false,

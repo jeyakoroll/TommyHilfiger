@@ -98,8 +98,8 @@ p {
 
 @media screen and (max-width: 768px) {
   .header {
-    min-height: 185px;
     display: none;
+    top: 20px;
   }
 }
 
@@ -191,6 +191,12 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .header__menu-item_hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .header__menu-item {
     margin-bottom: 5px;
   }
@@ -246,7 +252,7 @@ p {
 
 @media screen and (max-width: 768px) {
   .price {
-    padding-top: 20px;
+    padding-top: 0;
   }
 }
 
@@ -768,7 +774,7 @@ p {
   .about__left {
     width: 503px;
     padding-left: 6%;
-    margin: 15% auto 10%;
+    margin: 75px auto 10%;
   }
 }
 
@@ -845,7 +851,7 @@ p {
 
 @media screen and (max-width: 992px) {
   .about__slider {
-    margin: 0 auto 5%;
+    margin: 0 auto 25px;
   }
 }
 
@@ -1695,7 +1701,7 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
   .composition__wrap {
     background: url("../img/comp-mini.png") no-repeat center center/cover;
     background-color: #fff;
@@ -1892,7 +1898,7 @@ p {
 
 @media screen and (max-width: 480px) {
   .composition__center-two {
-    left: -10%;
+    left: 2%;
   }
 }
 
@@ -1951,7 +1957,7 @@ p {
 
 @media screen and (max-width: 480px) {
   .composition__center-four {
-    left: -10%;
+    left: 2%;
   }
 }
 
@@ -1988,7 +1994,7 @@ p {
 
 @media screen and (max-width: 768px) and (max-width: 480px) {
   .composition__center-line_two {
-    left: -12%;
+    left: 0;
   }
 }
 
@@ -2013,7 +2019,7 @@ p {
 
 @media screen and (max-width: 768px) and (max-width: 480px) {
   .composition__center-line_four {
-    left: -12%;
+    left: 0;
   }
 }
 
@@ -2448,6 +2454,12 @@ p {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .work {
+    background: url("../img/footer-mob.png") no-repeat center center/cover;
+  }
+}
+
 .work .row {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -2520,6 +2532,12 @@ p {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .work__content {
+    padding: 0;
   }
 }
 
