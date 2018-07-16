@@ -499,11 +499,11 @@ p {
 			@include tablets {
 				width: 31px;
 			}
-			@include main(580px) {
-				width: 39px;
-			}
+			// @include main(580px) {
+			// 	width: 39px;
+			// }
 			@include phones {
-				width: 28px;
+				width: 19px;
 			}
 		}
 	}
@@ -1018,6 +1018,12 @@ p {
     height: 89%;
     left: 5.3%;
     top: 7%;
+  }
+  @include main(340px) {
+  	width: 98%;
+    height: 87%;
+    left: 11px;
+    top: 16px;
   }
 }
 
@@ -1538,7 +1544,12 @@ p {
     display: block;
     max-height: 100vh;
     height: 100vh;
-    padding: 40px 0px; }
+    padding: 40px 0px;
+    @include phones {
+    	height: 300px;
+    	max-height: 300px;
+    }
+   }
     #hero .slider-holder .bg-drop {
       position: absolute;
       width: 100%;

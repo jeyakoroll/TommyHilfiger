@@ -524,15 +524,9 @@ p {
   }
 }
 
-@media screen and (max-width: 580px) {
-  .price__list-item_three > span {
-    width: 39px;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .price__list-item_three > span {
-    width: 28px;
+    width: 19px;
   }
 }
 
@@ -1356,6 +1350,15 @@ p {
   }
 }
 
+@media screen and (max-width: 340px) {
+  .video__item-show {
+    width: 98%;
+    height: 87%;
+    left: 11px;
+    top: 16px;
+  }
+}
+
 .video__item-pic {
   position: absolute;
   left: -1px;
@@ -2120,6 +2123,13 @@ p {
   max-height: 100vh;
   height: 100vh;
   padding: 40px 0px;
+}
+
+@media screen and (max-width: 480px) {
+  #hero .slider-holder {
+    height: 300px;
+    max-height: 300px;
+  }
 }
 
 #hero .slider-holder .bg-drop {
